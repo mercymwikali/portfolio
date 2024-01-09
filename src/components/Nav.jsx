@@ -36,7 +36,7 @@ const Nav = () => {
   };
 
   return (
-    <div className='align-items-center justify-content-center'>
+    <div className='align-items-center justify-content-center' >
       <Menu
         className='background align-items-center justify-content-center'
         onClick={onClick}

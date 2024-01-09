@@ -36,6 +36,11 @@ body {
  border-color: var(--dark);
  border-radius: 2px;
 }
+.header-nav{
+  position: sticky !important;
+  z-index: 1 !important;
+  top: 0 !important;
+}
 
 /* .background:active {
   border-bottom: 2px solid !important;
@@ -92,7 +97,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 80dvh;
+    height: 50dvh;
     -webkit-mask-repeat: no-repeat;
   
   }

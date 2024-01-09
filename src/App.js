@@ -32,7 +32,7 @@ function App() {
   };
   return (
     <Layout style={layoutStyle} >
-      <Nav style={headerStyle}/>
+      <Nav style={headerStyle} />
       <AppRoutes/>
     </Layout>
   );
