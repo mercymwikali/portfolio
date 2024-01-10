@@ -31,7 +31,7 @@ function App() {
     height:'100%'
   };
   return (
-    <Layout style={layoutStyle} >
+    <Layout style={layoutStyle}  >
       <Nav style={headerStyle} />
       <AppRoutes/>
     </Layout>

@@ -2,7 +2,7 @@ import React from 'react'
 import { MailOutlined, LinkedinOutlined, GithubOutlined } from '@ant-design/icons';
 const Contact = () => {
   return (
-    <div class="container mt-5">
+    <div class="container mt-5" >
       <div className="row py-2 justify-content-center align-items-center">
         <div className="col-12 text-center">
           <h2 className="py-3 text-capitalize fw-bold border-bottom border-gray-400">

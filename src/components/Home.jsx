@@ -9,7 +9,7 @@ const Home = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div id='' className='container-fluid'>
+    <div id='' className='container-fluid background' >
       <About />
       <Portfolio />
       <Experience />

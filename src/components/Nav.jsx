@@ -19,10 +19,10 @@ const Nav = () => {
       label: 'SkillSet',
       key: '/experience'
     },
-    {
-      label: 'Contact',
-      key: '/contact'
-    },
+    // {
+    //   label: 'Contact',
+    //   key: '/contact'
+    // },
   ];
 
   // Set the current key based on the current pathname
