@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button, Spin } from 'antd';
-import { HeroImage } from '../assets/Images';
+import { motion } from 'framer-motion';
 import Typed from 'typed.js';
+import { HeroImage } from '../assets/Images';
 
 const About = () => {
   const typingRef = useRef(null);
@@ -54,7 +55,12 @@ const About = () => {
   };
 
   return (
-    <div className="d-block d-md-flex">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="d-block d-md-flex"
+    >
       <div className="item one col-12 col-md-6">
         <img src={HeroImage} className='image-fluid text-center ' alt="Hero" />
       </div>
@@ -65,27 +71,24 @@ const About = () => {
           </h1>
         </div>
         <div className="py-3 px-2">
-           <p className="mx-auto lh-lg text-break pt-2 ">
-              As a seasoned software developer, I possess proficiency in essential front-end and server-side languages. My unwavering interest and profound passion for software development have been the driving forces behind my continuous skill refinement through both personal and professional projects. Over the years, I have honed my algorithmic and problem-solving skills, cultivating a versatility that allows me to adeptly navigate a wide array of technologies and programming languages. Being primarily a self-learner, I am adept at swiftly adapting to new challenges, always ready to tackle the next exciting project with enthusiasm and creativity.
-            </p>
-
+          <p className="mx-auto lh-lg text-break pt-2 " style={{ fontSize: '1rem' }}>
+            As a seasoned software developer, I possess proficiency in essential front-end and server-side languages. My unwavering interest and profound passion for software development have been the driving forces behind my continuous skill refinement through both personal and professional projects. Over the years, I have honed my algorithmic and problem-solving skills, cultivating a versatility that allows me to adeptly navigate a wide array of technologies and programming languages. Being primarily a self-learner, I am adept at swiftly adapting to new challenges, always ready to tackle the next exciting project with enthusiasm and creativity.
+          </p>
         </div>
-        <div className="text-center">
-        <Button
-          type="primary"
-          block
-          ghost
-          size='large'
-          onClick={handleDownloadResume}
-          // loading={loading}
-        >
-          {loading ? <Spin size="default" /> : 'Download Resume'}
-        </Button>
+        <div className="text-center mt-5">
+          <Button
+            type="primary"
+            block
+            ghost
+            size='large'
+            onClick={handleDownloadResume}
+          >
+            {loading ? <Spin size="default" /> : 'Download Resume'}
+          </Button>
+        </div>
       </div>
-      </div>
-    </div>
+    </motion.div>
   );
-  
 }
 
 export default About;

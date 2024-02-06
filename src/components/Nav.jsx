@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu } from 'antd';
 
 const Nav = () => {
-  const [current, setCurrent] = useState('');
+  const [current, setCurrent] = useState('/');
   const location = useLocation();
 
   const items = [
@@ -25,13 +25,9 @@ const Nav = () => {
     // },
   ];
 
-  // Set the current key based on the current pathname
-  const findCurrentKey = () => {
-    const currentKey = items.find(item => location.pathname.includes(item.key))?.key;
-    setCurrent(currentKey || '');
-  };
 
   const onClick = (e) => {
+    // Update the selected key with the clicked key
     setCurrent(e.key);
   };
 
@@ -41,6 +37,7 @@ const Nav = () => {
         className='background align-items-center justify-content-center'
         onClick={onClick}
         selectedKeys={[current]}
+        defaultSelectedKeys={['/']}
         mode="horizontal"
       >
         {items.map(item => (

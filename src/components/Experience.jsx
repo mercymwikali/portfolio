@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { MsAzure, cSharp, css, gitLogo, mongodbicon, restftulapi } from "../assets/Images";
 import { tailwind } from "../assets/Images";
 import { html } from "../assets/Images";
@@ -53,22 +54,22 @@ const Experience = () => {
     {
       id: 10,
       title: "MongoDb",
-      src:mongodbicon
+      src: mongodbicon,
     },
     {
       id: 11,
       title: "REST Api",
-      src:restftulapi
+      src: restftulapi,
     },
     {
       id: 12,
       title: "C#",
-      src:cSharp
+      src: cSharp,
     },
     {
       id: 13,
       title: "Ms Azure",
-      src: MsAzure
+      src: MsAzure,
     },
   ];
 
@@ -85,17 +86,21 @@ const Experience = () => {
 
       <div className="row gap-4 align-items-center justify-content-center">
         {experiences.map(({ id, title, src }) => (
-          <div className="col-12 col-md-3 pb-4">
-              <div
+          <motion.div
             key={id}
-            className="d-flex align-items-center justify-content-between gap-10 lg-gap-0 items-center justify-between p-2 shadow-lg rounded-3 hover-scale-105 ease-in duration-300
-              odd-shadow-green-400 even-shadow-yellow-400"
+            className="col-12 col-md-3 pb-4"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: id * 0.1 }}
           >
-            <img src={src} width="64px" height="64px" alt={title} />
-            <h3 className="fw-light px-3">{title}</h3>
-          </div>
-          </div>
-        
+            <div
+              className="d-flex align-items-center justify-content-between gap-10 lg-gap-0 items-center justify-between p-2 shadow-lg rounded-3 hover-scale-105 ease-in duration-300
+              odd-shadow-green-400 even-shadow-yellow-400"
+            >
+              <img src={src} width="64px" height="64px" alt={title} />
+              <h3 className="fw-light px-3">{title}</h3>
+            </div>
+          </motion.div>
         ))}
       </div>
     </div>

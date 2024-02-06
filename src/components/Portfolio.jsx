@@ -1,9 +1,42 @@
 import React from 'react';
 import { hospital, judiciary, movies } from '../assets/Images';
 import { Button } from 'antd';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+const PortfolioCard = ({ card }) => {
+  const { ref, inView } = useInView();
+
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={variants}
+      className="col-12 mb-3 d-flex justify-content-center cursor-pointer  px-3 "
+    >
+      <div className="card bg-transparent shadow-lg" style={{ maxWidth: '850px' }}>
+        <div className="row g-0 align-items-center justify-content-center pt-3">
+          <div className="col-md-4 p-3 align-items-center justify-content-center" >
+            <img src={card.imgSrc} className="img-fluid rounded-start" alt="..." />
+          </div>
+          <div className="col-md-8 pb-3 px-3">
+            <h5 className="h6 text-decoration-underline">{card.title}</h5>
+            <p className="card-text"  style={{ fontSize: '.89rem' }}>{card.text}</p>
+            <Button type="default" href={card.demoLink} target="_blank" rel="noopener noreferrer" danger>Live Demo</Button>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const Portfolio = () => {
-  // Dummy data for additional cards
   const cardsData = [
     {
       id: 1,
@@ -19,7 +52,6 @@ const Portfolio = () => {
       text: 'Revolutionizing healthcare, our system transforms medical facilities nationwide, empowering hospitals to go paperless for streamlined operations and swift patient treatment. With robust data analytics, it offers invaluable insights for efficient business and hospital management, ensuring enhanced patient care and overall operational excellence.',
       demoLink: 'https://hospital-mgt.vercel.app/addPatient',
     },
-
     {
       id: 3,
       imgSrc: movies,
@@ -40,20 +72,7 @@ const Portfolio = () => {
       </div>
       <div id='portfolio' className='row justify-content-center align-items-center'>
         {cardsData.map((card) => (
-          <div key={card.id} className="col-12 mb-3 d-flex justify-content-center cursor-pointer  px-3 ">
-            <div className="card bg-transparent shadow-lg" style={{ maxWidth: '780px' }}>
-              <div className="row g-0 align-items-center justify-content-center">
-                <div className="col-md-4 p-3 align-items-center justify-content-center" >
-                  <img src={card.imgSrc} className="img-fluid rounded-start" alt="..." />
-                </div>
-                <div className="col-md-8 pb-3 px-3">
-                  <h5 className="h6 text-decoration-underline">{card.title}</h5>
-                  <p className="card-text">{card.text}</p>
-                  <Button type="default" href={card.demoLink} target="_blank" rel="noopener noreferrer" danger>Live Demo</Button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <PortfolioCard key={card.id} card={card} />
         ))}
       </div>
     </div>
