@@ -1,9 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import About from './components/About';
 import Nav from './components/Nav';
 import { Layout } from 'antd';
-import Home from './components/Home';
 import AppRoutes from './Routes';
 
 function App() {
@@ -13,16 +10,6 @@ function App() {
     height: 64,
     paddingInline: 48,
     lineHeight: '64px',
-  };
-  const contentStyle = {
-    textAlign: 'center',
-    lineHeight: '120px',
-    color: '#fff',
-    minheight:290
-  };
-  const footerStyle = {
-    textAlign: 'center',
-    color: '#fff',
   };
   const layoutStyle = {
     overflow: 'hidden',

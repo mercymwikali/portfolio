@@ -1,5 +1,5 @@
 import React from 'react';
-import { hospital, judiciary, movies } from '../assets/Images';
+import { hospital, judiciary, movies, leg } from '../assets/Images';
 import { Button } from 'antd';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -58,6 +58,13 @@ const Portfolio = () => {
       title: 'Movies App',
       text: 'My Movies App project was a deep dive into API integration, data fetching, error handling, and React Hooks. I gained valuable insights into managing state, handling asynchronous operations, and ensuring a seamless user experience. This project served as an excellent learning opportunity for mastering React Hooks and honing skills in modern web development.',
       demoLink: 'https://movie-app-tan-iota.vercel.app/-node',
+    },
+    {
+      id: 4,
+      imgSrc: leg,
+      title: 'Legacies Systems Website',
+      text: "The Legacies Systems Website was an exciting project, helping a new company shine online. Collaborating with an eager client, I designed and developed a website that showcased their brand and captured their vision. It's rewarding to have played a part in launching their company towards success.",
+      demoLink: 'https://legacies-website.vercel.app/',
     },
   ];
 

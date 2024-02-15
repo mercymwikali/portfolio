@@ -7,7 +7,6 @@ import { javascript } from "../assets/Images";
 import { react } from "../assets/Images";
 import { node } from "../assets/Images";
 import { nextjs } from "../assets/Images";
-import { github } from "../assets/Images";
 
 const Experience = () => {
   const experiences = [

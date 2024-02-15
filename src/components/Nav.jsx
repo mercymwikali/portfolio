@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
 
 const Nav = () => {
   const [current, setCurrent] = useState('/');
-  const location = useLocation();
 
   const items = [
     {

@@ -72,8 +72,7 @@ const About = () => {
         </div>
         <div className="py-3 px-2">
           <p className="mx-auto lh-lg text-break pt-2 " style={{ fontSize: '1rem' }}>
-            As a seasoned software developer, I possess proficiency in essential front-end and server-side languages. My unwavering interest and profound passion for software development have been the driving forces behind my continuous skill refinement through both personal and professional projects. Over the years, I have honed my algorithmic and problem-solving skills, cultivating a versatility that allows me to adeptly navigate a wide array of technologies and programming languages. Being primarily a self-learner, I am adept at swiftly adapting to new challenges, always ready to tackle the next exciting project with enthusiasm and creativity.
-          </p>
+          As someone deeply immersed in the world of software development, I've cultivated a strong command of vital front-end and server-side languages. My journey in this field has been fueled by an unyielding curiosity and a genuine love for crafting software solutions, which has propelled me to constantly refine my skills through both personal explorations and professional endeavors. Through the years, I've sharpened my ability to tackle complex problems and devise efficient algorithms, fostering a flexibility that enables me to navigate through various technologies and coding languages with ease. As a self-directed learner, I thrive on embracing new challenges, always eager to dive into the next project with enthusiasm and a flair for innovation.          </p>
         </div>
         <div className="text-center mt-md-5">
           <Button

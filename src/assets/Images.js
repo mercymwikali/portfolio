@@ -11,7 +11,6 @@ import nextjs from "./images/nextjs.png"
 import react from "./images/react.png"
 import html from "./images/html.png"
 import css from "./images/css.png"
-import github from "./images/github.png"
 import judiciary from "./images/judiciary.png"
 import hospital from "./images/hospital.png"
 import mongodbicon from "./images/mongodbicon.png"
@@ -19,6 +18,7 @@ import restftulapi from "./images/restfulapi.png"
 import cSharp from "./images/cSharp.png"
 import MsAzure from "./images/MsAzure.png"
 import gitLogo from "./images/gitLogo.png"
+import leg from "./images/leg.png"
 
 
 
@@ -42,5 +42,6 @@ export {
     mongodbicon,
     restftulapi,
     cSharp,
-    MsAzure
+    MsAzure,
+    leg
 };
