@@ -2,6 +2,7 @@ import './App.css';
 import Nav from './components/Nav';
 import { Layout } from 'antd';
 import AppRoutes from './Routes';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const headerStyle = {
@@ -21,6 +22,7 @@ function App() {
     <Layout style={layoutStyle}  >
       <Nav style={headerStyle} />
       <AppRoutes/>
+      <Analytics />
     </Layout>
   );
 }
