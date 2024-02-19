@@ -45,27 +45,29 @@ const Portfolio = () => {
       text: 'A prototype staff portal for over 6000 Judiciary employees, offering streamlined tools for leave requests, resource management, and insightful data visualizations on leave trends and expenses. Enhancing efficiency and fostering a data-driven approach to workforce management.',
       demoLink: 'https://judiciary-iota.vercel.app/',
     },
-    {
+{
       id: 2,
+      imgSrc: leg,
+      title: 'Legacies Systems Website',
+      text: "The Legacies Systems Website was an exciting project, helping a new company shine online. Collaborating with an eager client, I designed and developed a website that showcased their brand and captured their vision. It's rewarding to have played a part in launching their company towards success.",
+      demoLink: 'https://legacies-website.vercel.app/',
+    },
+
+    {
+      id: 3,
       imgSrc: hospital,
       title: 'Hospital Management System',
       text: 'Revolutionizing healthcare, our system transforms medical facilities nationwide, empowering hospitals to go paperless for streamlined operations and swift patient treatment. With robust data analytics, it offers invaluable insights for efficient business and hospital management, ensuring enhanced patient care and overall operational excellence.',
       demoLink: 'https://hospital-mgt.vercel.app/addPatient',
     },
     {
-      id: 3,
+      id: 4,
       imgSrc: movies,
       title: 'Movies App',
       text: 'My Movies App project was a deep dive into API integration, data fetching, error handling, and React Hooks. I gained valuable insights into managing state, handling asynchronous operations, and ensuring a seamless user experience. This project served as an excellent learning opportunity for mastering React Hooks and honing skills in modern web development.',
       demoLink: 'https://movie-app-tan-iota.vercel.app/-node',
     },
-    {
-      id: 4,
-      imgSrc: leg,
-      title: 'Legacies Systems Website',
-      text: "The Legacies Systems Website was an exciting project, helping a new company shine online. Collaborating with an eager client, I designed and developed a website that showcased their brand and captured their vision. It's rewarding to have played a part in launching their company towards success.",
-      demoLink: 'https://legacies-website.vercel.app/',
-    },
+    
   ];
 
   return (
