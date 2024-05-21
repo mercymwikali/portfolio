@@ -19,7 +19,7 @@ import cSharp from "./images/cSharp.png"
 import MsAzure from "./images/MsAzure.png"
 import gitLogo from "./images/gitLogo.png"
 import leg from "./images/leg.png"
-
+import academic from "./images/academic.png"
 
 
 
@@ -43,5 +43,6 @@ export {
     restftulapi,
     cSharp,
     MsAzure,
-    leg
+    leg,
+    academic
 };

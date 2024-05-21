@@ -1,5 +1,5 @@
 import React from 'react';
-import { hospital, judiciary, movies, leg } from '../assets/Images';
+import { hospital, judiciary, movies, leg, academic } from '../assets/Images';
 import { Button } from 'antd';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -27,7 +27,7 @@ const PortfolioCard = ({ card }) => {
           </div>
           <div className="col-md-8 pb-3 px-3">
             <h5 className="h6 text-decoration-underline">{card.title}</h5>
-            <p className="card-text"  style={{ fontSize: '.89rem' }}>{card.text}</p>
+            <p className="card-text" style={{ fontSize: '.89rem' }}>{card.text}</p>
             <Button type="default" href={card.demoLink} target="_blank" rel="noopener noreferrer" danger>Live Demo</Button>
           </div>
         </div>
@@ -45,8 +45,15 @@ const Portfolio = () => {
       text: 'A prototype staff portal for over 6000 Judiciary employees, offering streamlined tools for leave requests, resource management, and insightful data visualizations on leave trends and expenses. Enhancing efficiency and fostering a data-driven approach to workforce management.',
       demoLink: 'https://judiciary-iota.vercel.app/',
     },
-{
+    {
       id: 2,
+      imgSrc: academic,
+      title: 'Online Writers Freelance Portal',
+      text: 'The Online Writers Freelance Portal is designed to streamline the management of freelancing academic work. It offers a seamless and efficient platform for handling online writing projects, ensuring both efficiency and effectiveness in project management. Additionally, the portal facilitates payment management for users. Feel free to explore the deployed test site as a manager user using the following credentials: email - kate@email, password - kate123.',
+      demoLink: 'https://crowwriter.vercel.app/login',
+    },
+    {
+      id: 3,
       imgSrc: leg,
       title: 'Legacies Systems Website',
       text: "The Legacies Systems Website was an exciting project, helping a new company shine online. Collaborating with an eager client, I designed and developed a website that showcased their brand and captured their vision. It's rewarding to have played a part in launching their company towards success.",
@@ -54,20 +61,20 @@ const Portfolio = () => {
     },
 
     {
-      id: 3,
+      id: 4,
       imgSrc: hospital,
       title: 'Hospital Management System',
       text: 'Revolutionizing healthcare, our system transforms medical facilities nationwide, empowering hospitals to go paperless for streamlined operations and swift patient treatment. With robust data analytics, it offers invaluable insights for efficient business and hospital management, ensuring enhanced patient care and overall operational excellence.',
       demoLink: 'https://hospital-mgt.vercel.app/addPatient',
     },
     {
-      id: 4,
+      id: 5,
       imgSrc: movies,
       title: 'Movies App',
       text: 'My Movies App project was a deep dive into API integration, data fetching, error handling, and React Hooks. I gained valuable insights into managing state, handling asynchronous operations, and ensuring a seamless user experience. This project served as an excellent learning opportunity for mastering React Hooks and honing skills in modern web development.',
       demoLink: 'https://movie-app-tan-iota.vercel.app/-node',
     },
-    
+
   ];
 
   return (
