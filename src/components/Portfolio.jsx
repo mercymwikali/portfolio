@@ -50,7 +50,7 @@ const Portfolio = () => {
       imgSrc: academic,
       title: 'Online Writers Freelance Portal',
       text: 'The Online Writers Freelance Portal is designed to streamline the management of freelancing academic work. It offers a seamless and efficient platform for handling online writing projects, ensuring both efficiency and effectiveness in project management. Additionally, the portal facilitates payment management for users. Feel free to explore the deployed test site as a manager user using the following credentials: email - kate@email, password - kate123.',
-      demoLink: 'https://crowwriter.vercel.app/login',
+      demoLink: 'https://crowriter.vercel.app/',
     },
     {
       id: 3,
